@@ -1,0 +1,32 @@
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .suggestion-item:last-child {
+    border-bottom: none;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .suggestions-list .active {
+    background-color: #e6e6e6;
+    color: #000;
+  }
+  
