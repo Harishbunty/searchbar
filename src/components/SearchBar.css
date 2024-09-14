@@ -1,42 +1,89 @@
-.search-container {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .search-container input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .search-container input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  .suggestions-list {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    background-color: #fff;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-  }
-  
-  .suggestion-item {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .suggestion-item:hover {
-    background-color: #f1f1f1;
-  }
-  
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container for the input and icon */
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 18px;
+  color: #999;
+}
+
+/* Stylish input field */
+.search-bar-container input {
+  width: 100%;
+  padding: 12px 20px 12px 45px; /* Padding left for search icon */
+  border: 2px solid #ccc;
+  border-radius: 50px; /* Fully rounded edges */
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f7f7f7;
+  outline: none;
+}
+
+/* Focus and hover effects for input */
+.search-bar-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+/* Loading text */
+.loading {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Suggestions list styling */
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  max-width: 600px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Individual suggestion item */
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for suggestion items */
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Active class for keyboard navigation */
+.suggestions-list .active {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+/* Remove border from the last suggestion item */
+.suggestion-item:last-child {
+  border-bottom: none;
+}
